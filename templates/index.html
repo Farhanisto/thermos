@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block bm %}
+<h1>Your most recent Bookmarks</h1>
+{% if new_bookmarks%}
+<ul>
+    {%for bm in new_bookmarks%}
+    <li>{{bm.user}} added<a href='{{bm.url}}'>{{bm.url}} </a>
+    </li>
+    {%endfor%}
+</ul>
+{% else %}
+<h1>Nothing added recently</h1>
+
+{%endif%}
+
+{%endblock%}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% from "form_macros.html" import render_field %}
+
+{%block hide%}{%endblock%}
+
+{%block content %}
+
+<form action="" method="POST">
+<article>
+{{form.hidden_tag()}}
+
+<table>
+	{{render_field(form.url,size=50)}}
+	{{render_field(form.description,size=50)}}
+	<tr>
+		<td><button type='submit' value='submit'>submit</button></td>
+	</tr>
+</table>
+
+</article>
+
+</form>
+
+{%endblock%}
